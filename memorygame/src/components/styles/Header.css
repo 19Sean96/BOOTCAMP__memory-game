@@ -1,0 +1,13 @@
+header {
+    width: 100%;
+    background-color: rgb(156, 126, 116);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.scores {
+    width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,50 @@
+[
+    {
+        "color": "#25CCF7",
+        "name": "discoBlue"
+    },
+    {
+        "color": "#EAB543",
+        "name": "honeyGlow"
+    },
+    {
+        "color": "#F97F51",
+        "name": "gardeniaOrange"
+    },
+    {
+        "color": "#FC427B",
+        "name": "sasquatchPink"
+    },
+    {
+        "color": "#9AECDB",
+        "name": "oasisBlue"
+    },
+    {
+        "color": "#82589F",
+        "name": "lavender"
+    },
+    {
+        "color": "#3B3B98",
+        "name": "bluebell"
+    },
+    {
+        "color": "#6ab04c",
+        "name": "pureApple"
+    },
+    {
+        "color": "#e056fd",
+        "name": "heliotrope"
+    },
+    {
+        "color": "#130f40",
+        "name": "deepCove"
+    },
+    {
+        "color": "#c7ecee",
+        "name": "icePackBlue"
+    },
+    {
+        "color": "#f9ca24",
+        "name": "turboYellow"
+    }
+]
