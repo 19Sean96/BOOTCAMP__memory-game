@@ -12,7 +12,7 @@ class App extends React.Component {
       high: 0,
       colors,
       shapes,
-      shapeLength: 12
+      shapesClicked: []
   }
 
   increaseByOne = () => {
@@ -22,28 +22,33 @@ class App extends React.Component {
         current: current
       }
     )
-    console.log("colors", this.state.colors);
-    console.log("shapes", this.state.shapes);
     this.rearrangeArr();
+  }
+
+  resetScore = () => {
+    console.log(this.state.current);
+    if (this.state.current > this.state.high) {
+      this.setState({high: this.state.current})
+    } 
+    this.setState(
+      {
+        current: 0,
+        shapesClicked: []
+      }
+    )
   }
 
   rearrangeArr = () => {
     let shapes = this.state.shapes;
     let colors = this.state.colors;
-    console.log("SHAPES BEFORE", shapes);
-    console.log("COLORS BEFORE", colors);
     for (let i = shapes.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [shapes[i], shapes[j]] = [shapes[j], shapes[i]];
     }
-
     for (let i = colors.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [colors[i], colors[j]] = [colors[j], colors[i]];
     }
-
-    console.log("SHAPES AFTER", shapes);
-    console.log("COLORS BEFORE", colors);
   }
 
   render() {
@@ -57,6 +62,8 @@ class App extends React.Component {
           shapes={this.state.shapes}
           colors={this.state.colors}
           rearrange={this.increaseByOne}
+          shapesClicked={this.state.shapesClicked}
+          resetScore={this.resetScore}
          />
       </div>
     );

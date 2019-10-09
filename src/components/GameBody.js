@@ -3,16 +3,28 @@ import "./styles/GameBody.css";
 import Shape from "./Shape";
 
 function GameBody(props) {
+    let shapesClicked = props.shapesClicked;
     return (
         <div>
             <main className="game">
                 <div className="container">
                     {props.shapes.map((shape,index) => (
-                        <Shape 
+                        <Shape
                             path={shape.path}
                             type={shape.type}
                             colorHex={props.colors[index].color}
                             rearrange={props.rearrange}
+                            // key={shape.id}
+                            checkShape={shape => {
+                                let newShape = shapesClicked.includes(shape) ? function() {
+                                    props.resetScore();
+                                } : function() {
+                                    shapesClicked.push(shape);
+                                    console.log(shapesClicked);
+                                };
+                                newShape();
+
+                            }}
                         />
                     ))}
                 </div>

@@ -5,7 +5,7 @@ function Header(props) {
     return (
         <div>
             <header>
-                <h3>Memory Game!</h3>
+                <h3><span className="italic">Reactive</span> Shapes</h3>
                 <div className="scores">
                     <p>
                         Current Score: <span className="currentScore">{props.currentScore}</span>
@@ -14,7 +14,6 @@ function Header(props) {
                         High Score: <span className="highScore">{props.highScore}</span>
                     </p>
                 </div>
-                <button onClick={props.onClick}>This is a button</button>
             </header>
         </div>
     );
