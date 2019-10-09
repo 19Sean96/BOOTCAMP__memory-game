@@ -14,13 +14,12 @@ function GameBody(props) {
                             type={shape.type}
                             colorHex={props.colors[index].color}
                             rearrange={props.rearrange}
-                            // key={shape.id}
+                            key={index}
                             checkShape={shape => {
                                 let newShape = shapesClicked.includes(shape) ? function() {
                                     props.resetScore();
                                 } : function() {
                                     shapesClicked.push(shape);
-                                    console.log(shapesClicked);
                                 };
                                 newShape();
 

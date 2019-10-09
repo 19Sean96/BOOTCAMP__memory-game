@@ -26,7 +26,6 @@ class App extends React.Component {
   }
 
   resetScore = () => {
-    console.log(this.state.current);
     if (this.state.current > this.state.high) {
       this.setState({high: this.state.current})
     } 
